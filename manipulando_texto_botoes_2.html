@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Várias Funções com Botões e Event Listeners</title>
+</head>
+<body>
+<h2>Escolha uma Ação:</h2>
+
+<!-- Botões sem eventos diretamente no HTML -->
+<button id="botaoCor">Mudar Cor</button>
+<button id="botaoTexto">Mudar Texto</button>
+<button id="botaoMensagem">Mostrar Mensagem</button>
+
+<!-- Elemento para manipulação -->
+<p id="meuParagrafo">Este é um parágrafo que será alterado.</p>
+
+<script>
+    // Adicionando os event listeners aos botões
+    document.getElementById('botaoCor').addEventListener('click', mudarCor);
+    document.getElementById('botaoTexto').addEventListener('click', mudarTexto);
+    document.getElementById('botaoMensagem').addEventListener('click', mostrarMensagem);
+
+    // Função que altera a cor do texto
+    function mudarCor() {
+        document.getElementById('meuParagrafo').style.color = 'green';
+    }
+
+    // Função que altera o conteúdo do texto
+    function mudarTexto() {
+        document.getElementById('meuParagrafo').innerHTML = 'Texto modificado com sucesso!';
+    }
+
+    // Função que exibe uma mensagem no console
+    function mostrarMensagem() {
+        console.log('O botão foi clicado e a função foi chamada!');
+        alert('Mensagem exibida após clicar no botão!');
+    }
+</script>
+</body>
+</html>
+<!--
+Explicação com Event Listeners:
+
+	•	Neste exemplo, removemos o onclick dos botões no HTML. Em vez disso, usamos addEventListener() no arquivo JavaScript para associar as funções a eventos de clique nos botões.
+	•	Cada botão (botaoCor, botaoTexto, botaoMensagem) tem um ID único, que é usado para identificar o botão no JavaScript e atribuir o evento de clique correspondente.
+
+Vantagens do uso de Event Listeners:
+
+	•	Separação de responsabilidades: O HTML fica mais limpo, e toda a lógica de comportamento fica no arquivo JavaScript.
+	•	Reutilização e escalabilidade: Você pode adicionar e remover eventos dinamicamente, sem alterar o HTML.
+
+Esses exemplos mostram como chamar diferentes funções ao clicar em botões específicos, tanto usando o atributo onclick diretamente no HTML, quanto com event listeners no JavaScript. Essa flexibilidade te permite criar interações dinâmicas e responsivas com o usuário!
+-->

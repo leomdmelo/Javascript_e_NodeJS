@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Interação com JavaScript</title>
+</head>
+<body>
+<h1 id="titulo">Título original</h1>
+<button onclick="mudarTitulo()">Mudar Título</button>
+
+<script>
+  function mudarTitulo() {
+      document.getElementById('titulo').innerHTML = 'Título alterado via JavaScript';
+  }
+</script>
+</body>
+</html>

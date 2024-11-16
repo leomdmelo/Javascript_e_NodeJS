@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Várias Funções com Botões</title>
+</head>
+<body>
+<h2>Escolha uma Ação:</h2>
+
+<!-- Botões que chamam funções diferentes -->
+<button onclick="mudarCor()">Mudar Cor</button>
+<button onclick="mudarTexto()">Mudar Texto</button>
+<button onclick="mostrarMensagem()">Mostrar Mensagem</button>
+
+<!-- Elemento para manipulação -->
+<p id="meuParagrafo">Este é um parágrafo que será alterado.</p>
+
+<script>
+    // Função que altera a cor do texto
+    function mudarCor() {
+        document.getElementById('meuParagrafo').style.color = 'blue';
+    }
+
+    // Função que altera o conteúdo do texto
+    function mudarTexto() {
+        document.getElementById('meuParagrafo').innerHTML = 'O texto foi alterado!';
+    }
+
+    // Função que exibe uma mensagem no console
+    function mostrarMensagem() {
+        console.log('Botão clicado! Função foi executada.');
+        alert('Você clicou no botão Mostrar Mensagem!');
+    }
+</script>
+</body>
+</html>
+
+<!--
+	1.	HTML: Aqui, temos três botões. Cada um tem um evento onclick que chama uma função específica do arquivo script.js.
+	•	O botão “Mudar Cor” chama a função mudarCor().
+	•	O botão “Mudar Texto” chama a função mudarTexto().
+	•	O botão “Mostrar Mensagem” chama a função mostrarMensagem().
+	2.	JavaScript: Criamos três funções diferentes:
+	•	mudarCor(): Altera a cor do parágrafo com o id="meuParagrafo" para azul.
+	•	mudarTexto(): Modifica o conteúdo do mesmo parágrafo.
+	•	mostrarMensagem(): Exibe uma mensagem no console e abre um alert.
+-->

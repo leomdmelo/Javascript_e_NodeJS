@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mostrar e Esconder</title>
+</head>
+<body>
+<button onclick="toggleElemento()">Mostrar/Esconder Texto</button>
+<p id="texto" style="display:none;">Este texto pode ser mostrado ou escondido.</p>
+
+<script>
+    function toggleElemento() {
+        let texto = document.getElementById('texto');
+        if (texto.style.display === 'none') {
+            texto.style.display = 'block';
+        } else {
+            texto.style.display = 'none';
+        }
+    }
+</script>
+</body>
+</html>
